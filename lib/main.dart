@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/home.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_application_1/pages/login.dart';
 
 void main() {
@@ -12,24 +13,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        primaryColor: Colors.red,
-        primarySwatch: Colors.yellow
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark
-      ),
-
+          primaryColor: Colors.red,
+          primarySwatch: Colors.blueGrey,
+          fontFamily: GoogleFonts.lato().fontFamily,
+          primaryTextTheme: GoogleFonts.latoTextTheme()),
+      darkTheme: ThemeData(brightness: Brightness.dark),
 
       //Routes
-      initialRoute: "/home",      //it makes "/home" the initial route instead of "/"
+      initialRoute: "/login",
+      //it makes "/home" the initial route instead of "/"
       routes: {
-        "/" :(context) => HomePage(),         //By default it goes to the page of "/"
-        "/login":(context) => loginPage()
+        "/": (context) => HomePage(), //By default it goes to the page of "/"
+        "/login": (context) => loginPage()
       },
-      );
+    );
   }
 }
- 
