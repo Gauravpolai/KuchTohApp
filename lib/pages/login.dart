@@ -40,9 +40,7 @@ class loginPage extends StatelessWidget {
             ),
           ),
 
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: ElevatedButton(
+           ElevatedButton(
               onPressed: () {},
               child: Text("LogIn"),
               style: ElevatedButton.styleFrom(
@@ -52,7 +50,7 @@ class loginPage extends StatelessWidget {
               minimumSize: Size(120, 60)
               ), 
             ),
-          )
+  
           
         ],
       )),
